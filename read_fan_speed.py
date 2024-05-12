@@ -29,7 +29,7 @@ GPIO.add_event_detect(RPM_PIN, GPIO.FALLING, get_rpm)
 
 try:
     while True:
-        print("%.f RPM" % rpm)
+        print("{:.0f} RPM".format(rpm), end="\r")
         rpm = 0
         time.sleep(1)
 
