@@ -19,7 +19,7 @@ def get_rpm(n):
     dt = time.time() - t
     # reject spuriously short pulses
     if dt < 0.005:
-        return  
+        return
 
     freq = 1 / dt
     rpm = (freq / RPM_PULSE) * 60
