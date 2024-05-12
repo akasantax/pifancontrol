@@ -2,9 +2,9 @@
 Description=pifancontrol
 
 [Service]
-ExecStart=/usr/bin/python3 /home/pi/pifancontrol/fan_control.py
+ExecStart=/usr/bin/python3 /home/ubuntu/pifancontrol/fan_control.py
 Restart=on-failure
-User=pi
+User=ubuntu
 
 [Install]
 WantedBy=default.target
