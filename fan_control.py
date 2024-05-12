@@ -22,12 +22,15 @@ def get_temp():
 
 print("fan control running...")
 
-while 1:
-    temp = get_temp()
-    if temp > 70:
-        fan.ChangeDutyCycle(100)
-    elif temp > 60:
-        fan.ChangeDutyCycle(70)
-    else:
-        fan.ChangeDutyCycle(50)
-    time.sleep(5)
+try:
+    while True:
+        temp = get_temp()
+        if temp > 70:
+            fan.ChangeDutyCycle(100)
+        elif temp > 60:
+            fan.ChangeDutyCycle(70)
+        else:
+            fan.ChangeDutyCycle(50)
+        time.sleep(5)
+except KeyboardInterrupt:
+    GPIO.cleanup()
