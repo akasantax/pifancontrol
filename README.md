@@ -11,6 +11,9 @@ Fan: Noctua NF-A4x10 5V PWM
 <h1>Instruction</h1>
 
 ```diff
+# install python package
+pip3 install RPi.GPIO
+
 # setup service unit file
 sudo cp pifancontrol.service /etc/systemd/system/pifancontrol.service
 
